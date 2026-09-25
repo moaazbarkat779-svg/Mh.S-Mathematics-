@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Application | Mh.S Mathematics</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <nav>
+
+        <h2>Mh.S Mathematics</h2>
+
+        <div>
+
+            <a href="index.html">Home</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+        </div>
+
+    </nav>
+
+
+    <section id="application-page">
+
+        <p class="section-label">
+            STUDENT APPLICATION
+        </p>
+
+        <h1>
+            Application Details
+        </h1>
+
+
+       <div id="application-details">
+
+    <p>
+        Loading application...
+    </p>
+
+</div>
+
+<div id="status-section">
+
+    <label for="status">
+        Application Status
+    </label>
+
+    <select id="status">
+
+        <option value="Pending">
+            Pending
+        </option>
+
+        <option value="Contacted">
+            Contacted
+        </option>
+
+        <option value="Accepted">
+            Accepted
+        </option>
+
+        <option value="Rejected">
+            Rejected
+        </option>
+
+    </select>
+
+<button id="edit-application">
+    Edit Application
+</button>
+
+    <button id="save-status">
+        Save Status
+    </button>
+
+</div>
+
+<div id="student-account-section">
+
+    <h2>Student Account</h2>
+
+    <p id="student-account-status">
+        No student account has been created.
+    </p>
+
+    <button id="create-student-account">
+        Create Student Account
+    </button>
+
+</div>
+
+<div id="teacher-notes-section">
+
+    <label for="teacher-notes">
+        Teacher Notes
+    </label>
+
+    <textarea
+        id="teacher-notes"
+        placeholder="Write private notes about this student..."
+    ></textarea>
+
+    <button id="save-notes">
+        Save Notes
+    </button>
+
+</div>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

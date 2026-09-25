@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard | Mh.S Mathematics</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <nav>
+
+        <h2>Mh.S Mathematics</h2>
+
+        <div>
+
+    <a href="index.html">Home</a>
+
+    <a href="apply.html">Applications</a>
+
+    <a href="manage-courses.html">
+        Manage Courses
+    </a>
+
+    <button id="logout-button">
+        Log Out
+    </button>
+
+</div>
+
+    </nav>
+
+
+    <section id="dashboard">
+
+        <p class="section-label">
+            Mohamed Sobhy Dashboard
+        </p>
+
+        <h1>
+            Applications
+        </h1>
+
+        <p>
+            View student applications submitted through the website.
+        </p>
+
+
+ <div id="dashboard-stats">
+
+    <div class="stat-card">
+
+        <h3>Total Applications</h3>
+
+        <p id="total-applications">
+            0
+        </p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h3>Pending</h3>
+
+        <p id="pending-applications">
+            0
+        </p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h3>Contacted</h3>
+
+        <p id="contacted-applications">
+            0
+        </p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h3>Accepted</h3>
+
+        <p id="accepted-applications">
+            0
+        </p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <h3>Rejected</h3>
+
+        <p id="rejected-applications">
+            0
+        </p>
+
+    </div>
+
+</div>
+
+<div id="application-filters">
+
+    <input
+        type="text"
+        id="search-applications"
+        placeholder="Search by name or email..."
+    >
+
+    <select id="filter-course">
+
+        <option value="">
+            All Courses
+        </option>
+
+        <option value="igcse-gcse-maths">
+            IGCSE & GCSE Mathematics
+        </option>
+
+        <option value="igcse-gcse-us">
+            IGCSE & GCSE Mathematics (US)
+        </option>
+
+        <option value="igcse-additional">
+            IGCSE & GCSE Additional Mathematics
+        </option>
+
+        <option value="a-level-maths">
+            A Level Mathematics
+        </option>
+
+        <option value="a-level-further">
+            A Level Further Mathematics
+        </option>
+
+        <option value="ib-maths">
+            IB Mathematics
+        </option>
+
+        <option value="sat-maths">
+            SAT Mathematics
+        </option>
+
+        <option value="ap-maths">
+            AP Mathematics
+        </option>
+
+        <option value="university-maths">
+            University Mathematics
+        </option>
+
+    </select>
+
+
+    <select id="filter-status">
+
+        <option value="">
+            All Statuses
+        </option>
+
+        <option value="Pending">
+            Pending
+        </option>
+
+        <option value="Contacted">
+            Contacted
+        </option>
+
+        <option value="Accepted">
+            Accepted
+        </option>
+
+        <option value="Rejected">
+            Rejected
+        </option>
+
+    </select>
+
+
+    <button id="reset-filters">
+        Reset Filters
+    </button>
+
+</div>
+
+<div id="applications-container">
+
+    <p>
+        Loading applications...
+    </p>
+
+</div>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

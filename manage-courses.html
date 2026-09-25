@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Manage Courses | Mh.S Mathematics</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav>
+
+        <h2>Mh.S Mathematics</h2>
+
+        <div>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="courses.html">View Courses</a>
+
+            <button id="logout-button">
+                Log Out
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <section id="courses-page">
+
+        <p class="section-label">
+            Mh.S ADMIN
+        </p>
+
+        <h1>
+            Manage Courses
+        </h1>
+
+        <p>
+            Create and manage the mathematics courses
+            available to students.
+        </p>
+
+
+        <div id="courses-list">
+
+            <p>
+                Loading courses...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

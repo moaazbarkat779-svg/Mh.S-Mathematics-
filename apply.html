@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Apply | Mh.S' Mathematics</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <h2>Mh.S Mathematics</h2>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#courses">Courses</a>
+            <a href="index.html#videos">Videos</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Application -->
+
+    <section id="apply-page">
+
+        <p class="section-label">JOIN Mh.S' Mathematics</p>
+
+        <h1>Application Form</h1>
+
+        <p>
+            Fill in the information below to apply for
+            mathematics lessons with Mr. Mh.S.
+        </p>
+
+
+        <form id="application-form">
+
+            <label for="name">Full Name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your full name"
+                required
+            >
+
+
+            <label for="email">Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+                required
+            >
+
+
+            <label for="age">Age</label>
+
+            <input
+    type="number"
+    id="age"
+    placeholder="Your age"
+    min="1"
+    max="30"
+    required
+>
+
+
+            <label for="course">Course</label>
+
+<select id="course" name="course" required>
+
+    <option value="">
+        Select your course
+    </option>
+
+    <option value="igcse-gcse-maths">
+        IGCSE & GCSE Mathematics
+    </option>
+
+    <option value="igcse-gcse-us">
+        IGCSE & GCSE Mathematics (US)
+    </option>
+
+    <option value="igcse-additional">
+        IGCSE & GCSE Additional Mathematics
+    </option>
+
+    <option value="a-level-maths">
+        A Level Mathematics
+    </option>
+
+    <option value="a-level-further">
+        A Level Further Mathematics
+    </option>
+
+    <option value="ib-maths">
+        IB Mathematics
+    </option>
+
+    <option value="sat-maths">
+        SAT Mathematics
+    </option>
+
+    <option value="ap-maths">
+        AP Mathematics
+    </option>
+
+    <option value="university-maths">
+        University Mathematics
+    </option>
+
+</select>
+
+
+<div id="course-details">
+
+    <!-- A Level / Further Maths Level -->
+
+    <div id="level-container" class="dynamic-field">
+
+        <label for="level">Level</label>
+
+        <select id="level" name="level">
+
+            <option value="">
+                Select your level
+            </option>
+
+            <option>AS Level</option>
+
+            <option>A2 Level</option>
+
+            <option>A Level</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Session -->
+
+    <div id="session-container" class="dynamic-field">
+
+        <label for="session">Examination Session</label>
+
+        <select id="session" name="session">
+
+            <option value="">
+                Select your session
+            </option>
+
+            <option value="feb-march">
+                February / March
+            </option>
+
+            <option value="may-june">
+                May / June
+            </option>
+
+            <option value="oct-nov">
+                October / November
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Examination Board -->
+
+    <div id="board-container" class="dynamic-field">
+
+        <label for="board">Examination Board</label>
+
+        <select id="board" name="board">
+
+            <option value="">
+                Select your examination board
+            </option>
+
+            <option>Cambridge</option>
+
+            <option>AQA Oxford</option>
+
+            <option>Pearson Edexcel</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- University -->
+
+    <div id="university-container" class="dynamic-field">
+
+        <label for="university">
+            University
+        </label>
+
+        <input
+            type="text"
+            id="university"
+            name="university"
+            placeholder="Enter your university"
+        >
+
+    </div>
+
+</div>
+
+
+            <label for="grade">Current Grade / Level</label>
+
+            <input
+                type="text"
+                id="grade"
+                placeholder="e.g. Year 10 / Grade 10 / AS"
+            >
+
+
+            <label for="message">Tell us about yourself</label>
+
+            <textarea
+                id="message"
+                placeholder="What are you currently studying? What would you like help with?"
+            ></textarea>
+
+
+            <button type="submit">
+                Submit Application
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
