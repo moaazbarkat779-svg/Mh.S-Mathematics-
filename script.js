@@ -2333,3 +2333,106 @@ async function setStudentPassword() {
 
     }, 1500);
 }
+
+
+const sendPasswordEmailButton =
+    document.getElementById("send-password-email");
+
+if (sendPasswordEmailButton) {
+
+    sendPasswordEmailButton.addEventListener(
+        "click",
+        sendPasswordSetupEmail
+    );
+
+}
+
+
+async function sendPasswordSetupEmail() {
+
+    const urlParams =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    const applicationId =
+        urlParams.get("id");
+
+    if (!applicationId) {
+
+        alert("Could not find the application.");
+
+        return;
+    }
+
+
+    const confirmed =
+        confirm(
+            "Send a password setup email to this student?"
+        );
+
+    if (!confirmed) {
+        return;
+    }
+
+
+    sendPasswordEmailButton.disabled = true;
+
+    sendPasswordEmailButton.textContent =
+        "Sending...";
+
+
+    try {
+
+        const {
+            data,
+            error
+        } =
+            await supabaseClient.functions.invoke(
+                "send-student-password-email",
+                {
+                    body: {
+                        applicationId:
+                            applicationId
+                    }
+                }
+            );
+
+
+        if (error) {
+
+            console.error(
+                "Password email error:",
+                error
+            );
+
+            alert(
+                "Could not send the password setup email."
+            );
+
+            return;
+        }
+
+
+        if (data.error) {
+
+            alert(data.error);
+
+            return;
+        }
+
+
+        alert(
+            "Password setup email sent!"
+        );
+
+    } finally {
+
+        sendPasswordEmailButton.disabled =
+            false;
+
+        sendPasswordEmailButton.textContent =
+            "Send Password Setup Email";
+
+    }
+}
